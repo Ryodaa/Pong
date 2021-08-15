@@ -79,8 +79,9 @@ namespace Pong
 
         private void StartGame()
         {
-            BallTimer.Enabled = true;
             ballRallyCount = 0;
+            ballSpeed = 10;
+            BallTimer.Enabled = true;
             BallRandomizer();
         }
 
@@ -200,8 +201,6 @@ namespace Pong
 
             BallSpeedIncrease();
             ResetBall();
-            ScoreP1();
-            ScoreP2();
         }
 
 
@@ -239,6 +238,7 @@ namespace Pong
             if (Ball.Top < 1)
             {
                 Ball.Top += ballVerticalSpeed;
+                ballMovesUp = 0;
             }
         }
 
@@ -248,6 +248,7 @@ namespace Pong
             if (Ball.Top > 630)
             {
                 Ball.Top -= ballVerticalSpeed;
+                ballMovesUp = 1;
             }
         }
 
@@ -275,8 +276,16 @@ namespace Pong
 
         private void ResetBall()
         {
-            if (Ball.Left > 1050 || Ball.Left < -20)
+            if (Ball.Left > 1050)
             {
+                ScoreP1();
+                BallTimer.Enabled = false;
+                Ball.Left = 483;
+                Ball.Top = 304;
+            }
+            else if (Ball.Left < -20)
+            {
+                ScoreP2();
                 BallTimer.Enabled = false;
                 Ball.Left = 483;
                 Ball.Top = 304;
@@ -287,20 +296,14 @@ namespace Pong
 
         private void ScoreP1()
         {
+            scorePOne++;
             ScorePlayerOne.Text = scorePOne.ToString();
-            if (Ball.Left >= 1050)
-            {
-                scorePOne++;
-            }
         }
 
         private void ScoreP2()
         {
+            scorePTwo++;
             ScorePlayerTwo.Text = scorePTwo.ToString();
-            if (Ball.Left <= -20)
-            {
-                scorePTwo++;
-            }
         }
     }
 }
