@@ -1,0 +1,10 @@
+C:\Users\Ryoda\source\repos\Pong\Pong\bin\Release\Poeng.exe.config
+C:\Users\Ryoda\source\repos\Pong\Pong\bin\Release\Poeng.exe
+C:\Users\Ryoda\source\repos\Pong\Pong\bin\Release\Poeng.pdb
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Pong.csproj.AssemblyReference.cache
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Pong.Poeng.resources
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Pong.Properties.Resources.resources
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Pong.csproj.GenerateResource.cache
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Pong.csproj.CoreCompileInputs.cache
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Poeng.exe
+C:\Users\Ryoda\source\repos\Pong\Pong\obj\Release\Poeng.pdb

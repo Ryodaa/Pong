@@ -1,7 +1,7 @@
 ﻿
 namespace Pong
 {
-    partial class Form1
+    partial class Poeng
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@ namespace Pong
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poeng));
             this.ScorePlayerOne = new System.Windows.Forms.Label();
-            this.Ball = new System.Windows.Forms.PictureBox();
-            this.PaddleTwo = new System.Windows.Forms.PictureBox();
-            this.PaddleOne = new System.Windows.Forms.PictureBox();
             this.GameTimerP1 = new System.Windows.Forms.Timer(this.components);
             this.GameTimerP2 = new System.Windows.Forms.Timer(this.components);
             this.BallTimer = new System.Windows.Forms.Timer(this.components);
             this.ScorePlayerTwo = new System.Windows.Forms.Label();
+            this.Ball = new System.Windows.Forms.PictureBox();
+            this.PaddleTwo = new System.Windows.Forms.PictureBox();
+            this.PaddleOne = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaddleTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaddleOne)).BeginInit();
@@ -52,6 +53,34 @@ namespace Pong
             this.ScorePlayerOne.Size = new System.Drawing.Size(27, 29);
             this.ScorePlayerOne.TabIndex = 0;
             this.ScorePlayerOne.Text = "0";
+            // 
+            // GameTimerP1
+            // 
+            this.GameTimerP1.Enabled = true;
+            this.GameTimerP1.Interval = 10;
+            this.GameTimerP1.Tick += new System.EventHandler(this.IngameTimer_P1);
+            // 
+            // GameTimerP2
+            // 
+            this.GameTimerP2.Enabled = true;
+            this.GameTimerP2.Interval = 10;
+            this.GameTimerP2.Tick += new System.EventHandler(this.InGameTimer_P2);
+            // 
+            // BallTimer
+            // 
+            this.BallTimer.Enabled = true;
+            this.BallTimer.Interval = 10;
+            this.BallTimer.Tick += new System.EventHandler(this.BallMovementTimer);
+            // 
+            // ScorePlayerTwo
+            // 
+            this.ScorePlayerTwo.AutoSize = true;
+            this.ScorePlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScorePlayerTwo.Location = new System.Drawing.Point(704, 9);
+            this.ScorePlayerTwo.Name = "ScorePlayerTwo";
+            this.ScorePlayerTwo.Size = new System.Drawing.Size(27, 29);
+            this.ScorePlayerTwo.TabIndex = 4;
+            this.ScorePlayerTwo.Text = "0";
             // 
             // Ball
             // 
@@ -83,35 +112,7 @@ namespace Pong
             this.PaddleOne.TabIndex = 1;
             this.PaddleOne.TabStop = false;
             // 
-            // GameTimerP1
-            // 
-            this.GameTimerP1.Enabled = true;
-            this.GameTimerP1.Interval = 10;
-            this.GameTimerP1.Tick += new System.EventHandler(this.IngameTimer_P1);
-            // 
-            // GameTimerP2
-            // 
-            this.GameTimerP2.Enabled = true;
-            this.GameTimerP2.Interval = 10;
-            this.GameTimerP2.Tick += new System.EventHandler(this.InGameTimer_P2);
-            // 
-            // BallTimer
-            // 
-            this.BallTimer.Enabled = true;
-            this.BallTimer.Interval = 10;
-            this.BallTimer.Tick += new System.EventHandler(this.BallMovementTimer);
-            // 
-            // ScorePlayerTwo
-            // 
-            this.ScorePlayerTwo.AutoSize = true;
-            this.ScorePlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScorePlayerTwo.Location = new System.Drawing.Point(704, 9);
-            this.ScorePlayerTwo.Name = "ScorePlayerTwo";
-            this.ScorePlayerTwo.Size = new System.Drawing.Size(27, 29);
-            this.ScorePlayerTwo.TabIndex = 4;
-            this.ScorePlayerTwo.Text = "0";
-            // 
-            // Form1
+            // Poeng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,8 +123,10 @@ namespace Pong
             this.Controls.Add(this.PaddleTwo);
             this.Controls.Add(this.PaddleOne);
             this.Controls.Add(this.ScorePlayerOne);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Poeng";
+            this.Text = "Poeng";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PaddleMove);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PressSpace);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PaddleStop);

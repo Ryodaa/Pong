@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Pong
 {
-    public partial class Form1 : Form
+    public partial class Poeng : Form
     {
         bool goUpP1;
         bool goDownP1;
@@ -27,7 +27,7 @@ namespace Pong
         int ballSpeed = 10;
         Random random = new Random(); //randoms with only 2 act as bool
 
-        public Form1()
+        public Poeng()
         {
             ballMovesUp = random.Next(2);
             ballVerticalSpeed = random.Next(6);
