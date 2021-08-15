@@ -39,6 +39,7 @@ namespace Pong
             this.Ball = new System.Windows.Forms.PictureBox();
             this.PaddleTwo = new System.Windows.Forms.PictureBox();
             this.PaddleOne = new System.Windows.Forms.PictureBox();
+            this.madeBy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaddleTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaddleOne)).BeginInit();
@@ -112,12 +113,23 @@ namespace Pong
             this.PaddleOne.TabIndex = 1;
             this.PaddleOne.TabStop = false;
             // 
+            // madeBy
+            // 
+            this.madeBy.AutoSize = true;
+            this.madeBy.ForeColor = System.Drawing.Color.Azure;
+            this.madeBy.Location = new System.Drawing.Point(890, 632);
+            this.madeBy.Name = "madeBy";
+            this.madeBy.Size = new System.Drawing.Size(82, 13);
+            this.madeBy.TabIndex = 5;
+            this.madeBy.Text = "Made by Ryoda";
+            // 
             // Poeng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 654);
+            this.Controls.Add(this.madeBy);
             this.Controls.Add(this.ScorePlayerTwo);
             this.Controls.Add(this.Ball);
             this.Controls.Add(this.PaddleTwo);
@@ -148,6 +160,7 @@ namespace Pong
         private System.Windows.Forms.Timer GameTimerP2;
         private System.Windows.Forms.Timer BallTimer;
         private System.Windows.Forms.Label ScorePlayerTwo;
+        private System.Windows.Forms.Label madeBy;
     }
 }
 
